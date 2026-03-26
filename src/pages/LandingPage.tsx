@@ -89,6 +89,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Nav */}
+      {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -101,10 +102,10 @@ export default function LandingPage() {
             <a href="#how-it-works" className="hover:text-foreground transition-colors">How It Works</a>
             <a href="#pricing" className="hover:text-foreground transition-colors">Pricing</a>
             <a href="#testimonials" className="hover:text-foreground transition-colors">Testimonials</a>
-            <Link to="/role-select">
+            <Link to="/login">
               <Button variant="outline" size="sm">Log in</Button>
             </Link>
-            <Link to="/role-select">
+            <Link to="/register">
               <Button variant="hero" size="sm">Get Started</Button>
             </Link>
           </div>
@@ -132,7 +133,7 @@ export default function LandingPage() {
                 Submit your raw footage, get back polished content. A marketplace of vetted editors competing to deliver your vision — on time, every time.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/role-select">
+                <Link to="/register">
                   <Button variant="hero" size="xl">
                     Start Free Trial <ArrowRight className="w-5 h-5" />
                   </Button>
@@ -274,7 +275,7 @@ export default function LandingPage() {
                     </li>
                   ))}
                 </ul>
-                <Link to="/role-select">
+                <Link to="/register">
                   <Button variant={tier.popular ? "hero" : "outline"} className="w-full">
                     Get Started
                   </Button>
@@ -327,7 +328,7 @@ export default function LandingPage() {
           <motion.div {...fadeInUp}>
             <h2 className="text-4xl font-bold text-foreground mb-4">Ready to Transform Your Content Workflow?</h2>
             <p className="text-lg text-muted-foreground mb-8">Join 500+ brands and editors already on FrameCut.</p>
-            <Link to="/role-select">
+            <Link to="/register">
               <Button variant="hero" size="xl">
                 Get Started Free <ArrowRight className="w-5 h-5" />
               </Button>

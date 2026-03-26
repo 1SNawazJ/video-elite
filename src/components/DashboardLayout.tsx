@@ -131,12 +131,15 @@ function AppSidebar({ role }: { role: "client" | "editor" | "admin" }) {
           </div>
         )}
         <div className="p-4 pt-0">
-          <Link to="/role-select">
-            <button className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors w-full p-2 rounded-md hover:bg-secondary/50">
-              <LogOut className="w-4 h-4" />
-              {!collapsed && <span>Switch Role</span>}
-            </button>
-          </Link>
+          <button onClick={async () => {
+              const { supabase } = await import("@/lib/supabase");
+              await supabase.auth.signOut();
+              window.location.href = "/login";
+            }}
+          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors w-full p-2 rounded-md hover:bg-secondary/50">
+            <LogOut className="w-4 h-4" />
+           {!collapsed && <span>Log out</span>}
+          </button>
         </div>
       </div>
     </Sidebar>
